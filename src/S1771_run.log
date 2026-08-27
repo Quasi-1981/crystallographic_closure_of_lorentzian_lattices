@@ -1,0 +1,37 @@
+==============================================================================================
+S1771 -- finite orders of integral isometries by rank and signature
+==============================================================================================
+
+CONTROL -- structural signature set vs the linear-algebra measurement (rank 4)
+  [OK  ] C.1 every measured signature is predicted by the structural count 24 types checked
+  [OK  ] C.2 on the small types the measurement attains the whole predicted set 
+
+CONTROL -- Theorem 1, the inclusion that needs -g|_L  (ord(-A) = 2k for k odd)
+       identity, rank 3           ord(A) = 1    ord(-A) = 2    (k odd -> expect 2)
+       3-cycle, rank 3            ord(A) = 3    ord(-A) = 6    (k odd -> expect 6)
+       companion(Phi_5), rank 4   ord(A) = 5    ord(-A) = 10   (k odd -> expect 10)
+       companion(Phi_3), rank 2   ord(A) = 3    ord(-A) = 6    (k odd -> expect 6)
+  [OK  ] I.1 ord(-A) = 2k whenever ord(A) = k is odd                      
+
+TABLE -- which orders a lattice of the given signature admits
+  rank | definite (n,0)                     | LORENTZIAN (n-1,1)
+  -----+------------------------------------+-----------------------------------
+     2 | [1, 2, 3, 4, 6]                    | [1, 2]
+     3 | [1, 2, 3, 4, 6]                    | [1, 2, 3, 4, 6]
+     4 | [1, 2, 3, 4, 5, 6, 8, 10, 12]      | [1, 2, 3, 4, 6]
+     5 | [1, 2, 3, 4, 5, 6, 8, 10, 12]      | [1, 2, 3, 4, 5, 6, 8, 10, 12]
+     6 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30] | [1, 2, 3, 4, 5, 6, 8, 10, 12]
+     7 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30] | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30]
+     8 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 24, 28, 30, 36, 40, 42, 60] | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30]
+  [OK  ] T.0 orders on (n-1,1) = orders on the definite lattice of rank n-1 checked ranks [3, 4, 5, 6, 7, 8]
+  [OK  ] T.rank 2 (signature (1,1)) is {1,2}: the complement has rank 1   [1, 2]
+  [OK  ] T.rank 3 Lorentzian set is crystallographic                      [1, 2, 3, 4, 6]
+  [OK  ] T.rank 4 Lorentzian set is crystallographic                      [1, 2, 3, 4, 6]
+  [OK  ] T.rank 5 BREAKS the crystallographic set                         [1, 2, 3, 4, 5, 6, 8, 10, 12]
+  [OK  ] T.rank 5 gains exactly 5, 8, 10, 12                              [5, 8, 10, 12]
+  [OK  ] T.rank 6 is a plateau (same set as rank 5)                       [1, 2, 3, 4, 5, 6, 8, 10, 12]
+  [OK  ] T.rank 7 breaks again (order 7 appears)                          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30]
+  [OK  ] P.1 odd negative index  <=>  the type contains Phi_1 or Phi_2    all types, ranks 2..8
+
+==============================================================================================
+all checks passed

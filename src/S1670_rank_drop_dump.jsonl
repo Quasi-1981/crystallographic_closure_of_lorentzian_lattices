@@ -1,0 +1,6 @@
+{"kind": "control", "t": "(1,1,1,2)      rational", "r": 1, "rank": 3, "match": true}
+{"kind": "control", "t": "(1,sqrt2,0,0)  r=2", "r": 2, "rank": 2, "match": true}
+{"kind": "control", "t": "(1,sqrt2,sqrt3,sqrt6)  r=4", "r": 4, "rank": 0, "match": true}
+{"kind": "control", "t": "(2,3,-1,5)     rational (extra)", "r": 1, "rank": 3, "match": true}
+{"kind": "control", "t": "(1,sqrt2,1,0)  r=2 (extra)", "r": 2, "rank": 2, "match": true}
+{"kind": "verdict", "all_match": true}

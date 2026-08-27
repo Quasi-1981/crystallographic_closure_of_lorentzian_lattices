@@ -1,0 +1,28 @@
+==========================================================================
+S1671 — crystallographic restriction on I_{3,1}: order in {1,2,3,4,6}
+==========================================================================
+
+-- forbidden orders (companion of Phi_n): invariant-form signatures --
+   n      order    invariant-form signatures  (3,1)?
+   5      5        [(2, 2), (4, 0)]           no
+   8      8        [(2, 2), (4, 0)]           no
+   12     12       [(2, 2), (4, 0)]           no
+
+-- allowed orders: EXPLICIT integer isometries of I_{3,1} (eta=diag(1,1,1,-1)) --
+   n      order    eta-preserving   signature(3,1)
+   3      3        True             YES
+   4      4        True             YES
+   6      6        True             YES
+
+-- VERDICT --
+   [OK] forbidden orders 5,8,12 (Phi_5/Phi_8/Phi_12): NO invariant (3,1) form (definite only)
+   [OK] allowed orders 3,4,6: DO admit a (3,1) invariant form
+   [note] KILL-B (a forbidden order preserves (3,1)): not fired
+   VERDICT: OK -> order in {1,2,3,4,6}; crystallography CLOSED on I_{3,1}
+
+   => finite-order isometries of I_{3,1} lie in a compact subgroup (fix a timelike axis),
+      that axis is RATIONAL (ker(g-1) over Q), so g acts on a rational rank-3 section =>
+      3D crystallographic restriction: order in {1,2,3,4,6}.  No 5/8/10/12-fold axis exists.
+      With takt-57 (crystal <=> rational t): crystallography's native floor is 0 -- CLOSED.
+
+[dump] child-3.1/src\S1671_cryst_restriction_dump.jsonl

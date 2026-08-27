@@ -1,0 +1,119 @@
+============================================================================================
+S1770 -- litgate on the external reader's review of note-1 (I_(3,1) closure)
+============================================================================================
+
+TEST A -- N.3: does a rational eigenspace force a rational invariant line?
+  [OK  ] A.1 g integral, preserves eta_(3,1)                        
+  [OK  ] A.2 ord(g) = 4                                             ord = 4
+  [OK  ] A.3 dim ker(g - 1) = 2 (> 1: the reader's precondition)    basis [[0, 0, 1, 0], [0, 0, 0, 1]]
+  [OK  ] A.4 v = (0,0,1,sqrt2) lies in the eigenspace and is timelike q(v) = -1
+  [OK  ] A.5 g fixes the line spanned by v                          
+  [OK  ] A.6 that line is NOT rational (no rational vector spans it) coords span a Q-space of dim 2 -> S1670 gives rank(L cap v^perp) = 4 - 2 = 2 < 3
+  => the inference 'eigenspace over Q  ==>  THIS line is rational' is invalid;
+     step (N.2) can hand back exactly this line.  Reader's R1 stands.
+  [OK  ] A.7 patch: a RATIONAL timelike vector exists in the same eigenspace w = (0,0,1,2), q(w) = -3 -- the note's conclusion survives
+
+TEST C -- orbit averaging: integral timelike +-1 eigenvector (reader's Lemma 1)
+  [OK  ] C identity / I(3,1)                                        eps=+1  t=[0, 0, 0, -1]  q(t)=-1  g t = +t
+  [OK  ] C -I (swaps cone halves) / I(3,1)                          eps=-1  t=[0, 0, 0, -1]  q(t)=-1  g t = -t
+  [OK  ] C P3, order 3 / I(3,1)                                     eps=+1  t=[0, 0, 0, -3]  q(t)=-9  g t = +t
+  [OK  ] C R4, order 4 / I(3,1)                                     eps=+1  t=[0, 0, 0, -4]  q(t)=-16  g t = +t
+  [OK  ] C G6, order 6 / I(3,1)                                     eps=-1  t=[0, 0, 0, -6]  q(t)=-36  g t = -t
+  [OK  ] C -R4 / I(3,1)                                             eps=-1  t=[0, 0, 0, -4]  q(t)=-16  g t = -t
+  [OK  ] C R4 * G6 / I(3,1)                                         eps=-1  t=[0, 0, 0, -2]  q(t)=-4  g t = -t
+  [OK  ] C.pre non-unimodular lattice A2 + <1> + <-7>, det = -21    sig (3, 1, 0), ord(g) = 6
+  [OK  ] C order 6 / A2+<1>+<-7>                                    eps=-1  t=[0, 0, 0, -6]  q(t)=-252  g t = -t
+  [OK  ] C.neg control: no eps-choice on -I gives t = 0 (must fail) t = [0, 0, 0, 0]
+
+TEST D/E -- all rank-4 types by order, and every signature their invariant forms take
+  order | types (cyclotomic factors)                    | has +-1 block | signatures
+  ------+-----------------------------------------------+---------------+-----------
+      1 | Phi_1 + Phi_1 + Phi_1 + Phi_1                 | yes           | [(0, 4), (1, 3), (2, 2), (3, 1)]  <== (3,1)
+      2 | Phi_1 + Phi_1 + Phi_1 + Phi_2                 | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      2 | Phi_1 + Phi_1 + Phi_2 + Phi_2                 | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      2 | Phi_1 + Phi_2 + Phi_2 + Phi_2                 | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      2 | Phi_2 + Phi_2 + Phi_2 + Phi_2                 | yes           | [(0, 4), (1, 3), (2, 2), (3, 1)]  <== (3,1)
+      3 | Phi_1 + Phi_1 + Phi_3                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      3 | Phi_3 + Phi_3                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+      4 | Phi_1 + Phi_1 + Phi_4                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      4 | Phi_1 + Phi_2 + Phi_4                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      4 | Phi_2 + Phi_2 + Phi_4                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      4 | Phi_4 + Phi_4                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+      5 | Phi_5                                         | NO            | [(0, 4), (2, 2), (4, 0)]
+      6 | Phi_1 + Phi_1 + Phi_6                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      6 | Phi_1 + Phi_2 + Phi_3                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      6 | Phi_1 + Phi_2 + Phi_6                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      6 | Phi_2 + Phi_2 + Phi_3                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      6 | Phi_2 + Phi_2 + Phi_6                         | yes           | [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]  <== (3,1)
+      6 | Phi_3 + Phi_6                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+      6 | Phi_6 + Phi_6                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+      8 | Phi_8                                         | NO            | [(0, 4), (2, 2), (4, 0)]
+     10 | Phi_10                                        | NO            | [(0, 4), (2, 2), (4, 0)]
+     12 | Phi_3 + Phi_4                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+     12 | Phi_4 + Phi_6                                 | NO            | [(0, 4), (2, 2), (4, 0)]
+     12 | Phi_12                                        | NO            | [(0, 4), (2, 2), (4, 0)]
+  [OK  ] D.1 orders admitting an integral form of signature (3,1)   [1, 2, 3, 4, 6]
+  [OK  ] D.2 every (3,1)-admitting type contains Phi_1 or Phi_2     parity lemma: rotation blocks give an EVEN negative index
+  [OK  ] D.3 order 12 in rank 4 has more than one type (reader's R7) types: [[3, 4], [4, 6], [12]]
+  [OK  ] D.neg control: instrument is not blind -- it does return (3,1) somewhere 14 types produced (3,1)
+
+TEST F -- can the non-crystallographic orders act on a UNIMODULAR rank-4 lattice?
+  (every type of every such order, not only the primitive cyclotomic one)
+  order 5   Phi_5          params ['p0', 'p1']
+           det = 5*(4*p0**2 + 2*p0*p1 - p1**2)**2/16
+           square class of det: 5   (unimodular possible: NO, and that settles EVERY lattice at once)
+  [OK  ] F.Phi_5 NO unimodular lattice carries this action          det lies in the square class of 5 for every Z-lattice
+  order 8   Phi_8          params ['p0', 'p1']
+           det = (2*p0**2 - p1**2)**2
+           square class of det: 1   (unimodular possible: yes -- searching)
+           |det|=1 at sig (0, 4), odd    Gram = [[-3, -2, 0, 2], [-2, -3, -2, 0], [0, -2, -3, -2], [2, 0, -2, -3]]
+           |det|=1 at sig (2, 2), odd    Gram = [[-7, -5, 0, 5], [-5, -7, -5, 0], [0, -5, -7, -5], [5, 0, -5, -7]]
+           |det|=1 at sig (4, 0), odd    Gram = [[3, -2, 0, 2], [-2, 3, -2, 0], [0, -2, 3, -2], [2, 0, -2, 3]]
+  [OK  ] F.Phi_8 acts on I_(2,2) (odd unimodular of sig (2,2))      YES
+  order 10  Phi_10         params ['p0', 'p1']
+           det = 5*(4*p0**2 - 2*p0*p1 - p1**2)**2/16
+           square class of det: 5   (unimodular possible: NO, and that settles EVERY lattice at once)
+  [OK  ] F.Phi_10 NO unimodular lattice carries this action         det lies in the square class of 5 for every Z-lattice
+  order 12  Phi_3+Phi_4    params ['p0', 'p1']
+           det = 3*p0**2*p1**2/4
+           square class of det: 3   (unimodular possible: NO, and that settles EVERY lattice at once)
+  [OK  ] F.Phi_3+Phi_4 NO unimodular lattice carries this action    det lies in the square class of 3 for every Z-lattice
+  order 12  Phi_4+Phi_6    params ['p0', 'p1']
+           det = 3*p0**2*p1**2/4
+           square class of det: 3   (unimodular possible: NO, and that settles EVERY lattice at once)
+  [OK  ] F.Phi_4+Phi_6 NO unimodular lattice carries this action    det lies in the square class of 3 for every Z-lattice
+  order 12  Phi_12         params ['p0', 'p1']
+           det = (4*p0**2 - 3*p1**2)**2/16
+           square class of det: 1   (unimodular possible: yes -- searching)
+           |det|=1 at sig (2, 2), even   Gram = [[-8, -7, -4, 0], [-7, -8, -7, -4], [-4, -7, -8, -7], [0, -4, -7, -8]]
+  [OK  ] F.Phi_12 acts on I_(2,2) (odd unimodular of sig (2,2))     NO -- attained: [((2, 2), 'even')]
+
+TEST H -- exhibit the order-8 action on I(2,2) explicitly (no classification import)
+  [OK  ] H.1 odd unimodular invariant form of signature (2,2) for Phi_8 
+  [OK  ] H.2 explicit unimodular base change to a diagonal form     
+  [OK  ] H.3 the diagonal form is diag(+-1) with two of each sign   diag = [1, 1, -1, -1]
+  [OK  ] H.4 the transported isometry is INTEGRAL                   
+  [OK  ] H.5 it preserves eta_(2,2) = diag(1,1,-1,-1)               
+  [OK  ] H.6 its order is 8                                         ord = 8
+       explicit order-8 isometry of I(2,2):  [[-3, -3, -1, -4], [3, -3, -4, 1], [-4, 1, 3, -3], [1, 4, 3, 3]]
+       => 'Phi_8 acts on I(2,2)' is now a matrix, not a citation.
+  [OK  ] H.7 control for R9: orbit averaging gives NO timelike +-1 axis at index 2 t = [0, 0, 0, 0]
+  [OK  ] H.8 no odd unimodular (2,2) form exists for Phi_5 (square class 5) 
+
+TEST G -- the reader's explicit realisations of orders 1,2,3,4,6 on I(3,1)
+  [OK  ] G order 1 realised by an explicit integral isometry        ord = 1, preserves eta: True
+  [OK  ] G order 2 realised by an explicit integral isometry        ord = 2, preserves eta: True
+  [OK  ] G order 3 realised by an explicit integral isometry        ord = 3, preserves eta: True
+  [OK  ] G order 4 realised by an explicit integral isometry        ord = 4, preserves eta: True
+  [OK  ] G order 6 realised by an explicit integral isometry        ord = 6, preserves eta: True
+
+TEST I -- signature alone, without integrality: is order 5 forbidden?
+  [OK  ] I.1 R(2pi/5) preserves the form of signature (3,1)         
+  [OK  ] I.2 its order is 5                                         
+  [OK  ] I.3 it is NOT integral                                     cos(2pi/5) = -1/4 + sqrt(5)/4
+  => signature (3,1) alone permits order 5; what forbids it is signature AND
+     integrality AND rank 4 together.  The note's 'precisely the signature' is too strong.
+  [OK  ] I.4 'exactly one timelike direction' is false -- here are three independent ones [[0, 0, 0, 1], [1, 0, 0, 2], [0, 1, 1, 2]]
+
+============================================================================================
+all checks passed

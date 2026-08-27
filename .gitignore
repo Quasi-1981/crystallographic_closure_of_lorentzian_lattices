@@ -1,0 +1,21 @@
+# Python bytecode: regenerated on every run, never part of the record.
+__pycache__/
+*.py[cod]
+
+# LaTeX build intermediates (the shipped .pdf is the record; these are not)
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+
+# pdfTeX log of the paper build (the shipped .pdf is the record).
+# NOT a blanket *.log rule: src/*_run.log ARE the record and must stay tracked.
+/crystallographic_closure_en.log

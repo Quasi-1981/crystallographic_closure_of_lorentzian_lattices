@@ -1,0 +1,12 @@
+Crystallographic Closure of Integral Lorentzian Lattices and the Rank at Which It Ends
+Copyright 2026 Sobol Volodymyr (Quasi-1981), ORCID 0009-0006-9829-7931
+
+This product includes software developed by the author with the participation of
+AI models (Anthropic Claude). Per-artifact attribution is recorded in the git
+history via Co-Authored-By trailers.
+
+The probes depend on SymPy (BSD-3-Clause) and NumPy (BSD-3-Clause). Neither is
+redistributed here; both are declared dependencies.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE-CODE).
+The text of the paper is licensed under CC BY 4.0 (see LICENSE).

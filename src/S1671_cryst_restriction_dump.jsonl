@@ -1,0 +1,7 @@
+{"kind": "forbidden", "n": 5, "order": 5, "signatures": [[2, 2], [4, 0]], "has_3_1": false}
+{"kind": "forbidden", "n": 8, "order": 8, "signatures": [[2, 2], [4, 0]], "has_3_1": false}
+{"kind": "forbidden", "n": 12, "order": 12, "signatures": [[2, 2], [4, 0]], "has_3_1": false}
+{"kind": "allowed", "n": 3, "order": 3, "eta_preserving": true}
+{"kind": "allowed", "n": 4, "order": 4, "eta_preserving": true}
+{"kind": "allowed", "n": 6, "order": 6, "eta_preserving": true}
+{"kind": "verdict", "forbidden_ok": true, "allowed_ok": true, "verdict": true}

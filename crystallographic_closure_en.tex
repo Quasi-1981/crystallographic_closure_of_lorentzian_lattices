@@ -1,0 +1,261 @@
+% GENERATED from crystallographic_closure_en.md -- DO NOT EDIT BY HAND.
+% Source of truth is the Markdown; regenerate with src/S1765_build_tex.py.
+\documentclass[11pt,a4paper,onecolumn]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{microtype}
+\usepackage{longtable,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\bookmark}{\textbf{[cited]}}
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\setlength{\LTpre}{0.6em}
+\setlength{\LTpost}{0.6em}
+\title{Crystallographic Closure of Integral Lorentzian Lattices \ and the Rank at Which It Ends}
+\author{Vladimir Sobol \ \small ORCID 0009-0006-9829-7931 \ \small Independent Researcher, Ukraine}
+\date{2026-08-27}
+\begin{document}
+\maketitle
+
+\textbf{A finite-order integral isometry of any lattice of signature $(3,1)$ has order in ${1, 2, 3, 4, 6}$; for $I_{3,1}$ all five are realized. On signature $(4,1)$ this is no longer true.}
+
+\textbf{Vladimir Sobol} $\cdot $ ORCID 0009-0006-9829-7931 $\cdot $ Independent Researcher
+
+
+\section*{1 $\cdot $ Statement}
+
+\begin{quote}\textbf{Lemma 1 (integral timelike axis).} Let $\Lambda $ be an integral lattice of signature $(n,1)$, $g \in  O(\Lambda )$ a finite-order isometry. Then there exists an \textbf{integral} vector $t \in  \Lambda $ with $q(t) < 0$ and $\varepsilon  \in  {\pm 1}$ such that $g\cdot t = \varepsilon \cdot t$.\end{quote}
+
+\begin{quote}\textbf{Theorem 1 (reduction).} In the notation of Lemma 1, the lattice $L := t^\perp  \cap  \Lambda $ is \textbf{positive definite}, has rank $n$, is invariant under $g$, and $ord(g) = lcm( ord(g|_L), ord(\varepsilon ) )$. Hence the set of orders on signature $(n,1)$ \textbf{equals} the set of orders on positive definite lattices of rank $n$.\end{quote}
+
+\begin{quote}\textbf{Theorem 2 ($n = 3$).} For \textbf{any} integral lattice of signature $(3,1)$: $ord(g) \in  {1, 2, 3, 4, 6}$.\end{quote}
+
+\begin{quote}\textbf{Corollary (sharpness).} For $I_{3,1}$ \textbf{all five} are realized: ${ ord(g) : g \in  O(I_{3,1}), ord(g) < \infty  } = {1, 2, 3, 4, 6}$.\end{quote}
+
+\textbf{Unimodularity does no work anywhere.} It is needed only for the corollary --- to name a specific lattice on which all five orders are present. The upper bound rests on \textbf{integrality} and \textbf{negative index 1}, and on nothing else.
+
+This is the same restriction as in three-dimensional crystallography --- but here it is proved for a \textbf{Lorentzian} lattice, and the reason it survives is the content of \S{}4. The reason it \textbf{ends} at the next rank is the content of \S{}5.
+
+
+\section*{2 $\cdot $ Proof}
+
+\subsection*{Lemma 1 --- averaging over the finite orbit}
+
+\textbf{(L.1.1) $\Lambda $ contains an integral timelike vector.} $\Lambda $ spans $\Lambda \otimes \mathbb{R}$, the condition $q < 0$ is \textbf{open} and nonempty (signature $(n,1)$), and $\Lambda \otimes \mathbb{Q}$ is dense in $\Lambda \otimes \mathbb{R}$ $\Longrightarrow $ there exists a rational vector with $q < 0$; multiplying by a common denominator gives an integral one. Denote it $e$.
+
+\textbf{(L.1.2) Choice of sign.} The set ${q < 0}$ has exactly \textbf{two} connected components (a cone and its opposite). An isometry either preserves both or swaps them; for two timelike vectors $u, v$ they lie in the same component if and only if $\langle u,v\rangle  < 0$. Hence there exists $\varepsilon  \in  {\pm 1}$ such that $h := \varepsilon \cdot g$ \textbf{preserves} the component of $e$. Together with $g$, the matrix $h$ has finite order; let $m := ord(h)$.
+
+\textbf{(L.1.3) Averaging.} Set
+
+\begin{quote}\ttfamily\small\obeylines
+   t := $\Sigma$\_\{j=0\}\textasciicircum{}\{m$-$1\} h\textasciicircum{}j $\cdot $ e
+\end{quote}
+
+\begin{itemize}
+\item $t$ is \textbf{integral}: $h$ is integral, $e$ is integral;
+\item $t$ is \textbf{timelike and nonzero}: all $h^j\cdot e$ lie in \textbf{one} component, and it is a \textbf{convex} cone, so the sum stays in it $\Longrightarrow $ $q(t) < 0$, in particular $t \neq  0$;
+\item $h\cdot t = t$, because $h^m = 1$ only permutes the summands. Since $h = \varepsilon \cdot g$ and $\varepsilon ^{2} = 1$, we get $g\cdot t = \varepsilon \cdot t$. $\blacksquare $
+\end{itemize}
+
+\textbf{Why averaging specifically.} The seemingly more natural route --- from the compactness of the generated group to an invariant \textbf{real} line, and then to its rationality --- has a gap: rationality of a proper \emph{subspace} does not imply rationality of a specific \emph{line} within it. A witness --- rotation by $\pi /2$ in the plane $(x_{1},x_{2})$ on $I_{3,1}$: the kernel $ker(g-1) = \langle e_{3},e_{4}\rangle $ is rational, but contains an invariant timelike line $(0,0,1,\sqrt{}2)$, which is not rational. Along with it, the rank-3 section would fall too. Averaging gives an axis that is \textbf{integral} from the start, constructively, and without any theory of compact groups.
+
+\subsection*{Theorem 1 --- reduction}
+
+$t$ is timelike $\Longrightarrow $ $t^\perp $ is positive definite, so $L = t^\perp  \cap  \Lambda $ is a positive definite integral lattice. $t$ is integral $\Longrightarrow $ $t^\perp $ is rational $\Longrightarrow $ $rank L = n$. From $g\cdot t = \pm t$ it follows that $g(t^\perp ) = t^\perp $, hence $g\cdot L = L$.
+
+The sum $L \oplus  \mathbb{Z}t$ has \textbf{finite index} in $\Lambda $, and an isometry that is the identity on a finite-index sublattice is the identity on all of $\Lambda $ (both span the same $\mathbb{Q}$-space). Therefore $ord(g) = lcm( ord(g|_L), ord(g|_{\mathbb{Z}t}) )$, and $g|_{\mathbb{Z}t} = \varepsilon $ has order 1 or 2. $\blacksquare $
+
+\textbf{Equality of sets --- both inclusions.}
+
+\textbf{($\subseteq$)} Let $k := ord(g|_L)$. If $\varepsilon  = +1$ \textbf{or} $k$ is even, then $ord(g) = lcm(k, ord \varepsilon ) = k$, and this order is already carried by $g|_L$ itself on the positive definite $L$. If $\varepsilon  = -1$ \textbf{and} $k$ is odd, then $ord(g) = 2k$, and the isometry needed is given by $-g|_L$: it is integral, preserves the same $L$, and from $(-g|_L)^m = (-1)^m \cdot  (g|_L)^m$, with $k$ odd, the identity is first reached at $m = 2k$, i.e. $ord(-g|_L) = 2k = ord(g)$.
+
+\textbf{($\supseteq$)} If $L_{0}$ is a positive definite integral lattice of rank $n$ with an isometry of order $k$, then $L_{0} \oplus  \langle -1\rangle $ has signature $(n,1)$ and carries the same isometry $\oplus  1$. $\blacksquare $
+
+\subsection*{Lemma 2 --- definite rank 3: a trace argument}
+
+\begin{quote}An integral isometry $h$ of finite order of a \textbf{positive definite} lattice of rank 3 has $ord(h) \in  {1,2,3,4,6}$.\end{quote}
+
+Over $\mathbb{R}$ such $h$ lies in $O(3)$, hence is conjugate to $R_\theta  \oplus  (\delta )$, $\delta  = \det (h) \in  {\pm 1}$, where $R_\theta $ is a rotation of the plane. The trace does not depend on the basis, and in the lattice basis the matrix is \textbf{integral}:
+
+\begin{quote}\ttfamily\small\obeylines
+   tr(h) = $\delta$ + 2$\cdot $cos $\theta $ $\in $ $\mathbb{Z}$   $\Longrightarrow $   2$\cdot $cos $\theta $ $\in $ $\mathbb{Z}$   $\Longrightarrow $   cos $\theta $ $\in $ \{0, $\pm $$\tfrac{1}{2}$, $\pm $1\}
+\end{quote}
+
+These are exactly the possible orders of the rotation $r := ord(R_\theta ) \in  {1,2,3,4,6}$. Next $ord(h) = lcm(r, ord(\delta ))$, and
+
+\begin{quote}\ttfamily\small\obeylines
+     r        :  1   2   3   4   6
+     lcm(2, r):  2   2   6   4   6      --- all in \{1,2,3,4,6\}
+\end{quote}
+
+so the set remains closed in the case $\delta  = -1$ as well. $\blacksquare $
+
+\textbf{Three different quantities, not one.} $r$ is the order of the planar \textbf{rotation}; $k = ord(h)$ is the order of the \textbf{whole} rank-3 isometry; $ord(g)$ is the order of the original Lorentzian isometry. $lcm(2,\cdot )$ is applied twice for different reasons: inside Lemma 2 (the $\delta $ block) and in Theorem 1 (the axis $\varepsilon $).
+
+\textbf{Zero imports.} Here a reference to the classical crystallographic restriction could have stood (Scherrer 1946, Coxeter 1969). It does not: the argument uses only the \textbf{integrality of the trace}, and this is three lines. The rest of the classical facts are also derived on the spot: a finite-order integral matrix is semisimple with roots of unity (the minimal polynomial divides $x^m - 1$, which is separable over $\mathbb{Q}$); a finite subgroup of $GL_n(\mathbb{Z})$ preserves a positive definite form (averaging). Scherrer and Coxeter remain a \textbf{historical reference, not a leg of the proof}.
+
+\subsection*{Theorem 2 and the corollary}
+
+Theorem 1 at $n = 3$ together with Lemma 2 gives $ord(g) \in  {1,2,3,4,6}$. Sharpness for $I_{3,1}$ --- by exhibition; $\eta  = \operatorname{diag}(1,1,1,-1)$:
+
+\begin{longtable}{p{0.31\linewidth} p{0.31\linewidth} p{0.31\linewidth}}
+\toprule
+\textbf{order} & \textbf{integral isometry} & \textbf{why this order} \\
+\midrule\endhead
+1 & $I_{4}$ & --- \\
+2 & $-I_{4}$ & --- \\
+3 & cyclic permutation $x_{1}\to x_{2}\to x_{3}\to x_{1}$ & order of the cycle \\
+4 & rotation by $\pi /2$ in the plane $(x_{1},x_{2})$ & $lcm(4,1)$ \\
+6 & the same permutation $\oplus  (-1)$ on $x_{4}$ & $lcm(3,2) = 6$ \\
+\bottomrule
+\end{longtable}
+
+All five are integral, all preserve $\eta $. $\blacksquare $
+
+
+\section*{3 $\cdot $ Exact scope --- in two tags}
+
+\textbf{The text must not claim more than the probe measured.} Hence:
+
+\begin{longtable}{p{0.31\linewidth} p{0.31\linewidth} p{0.31\linewidth}}
+\toprule
+\textbf{statement} & \textbf{tag} & \textbf{what supports it} \\
+\midrule\endhead
+Lemma 1, Theorem 1, Lemma 2 & \textbf{derived} & \S{}2, in full; zero imports \\
+orders $1,2,3,4,6$ are realized on $I_{3,1}$ & \textbf{derived} & the five explicit matrices above --- multiplied by hand \\
+orders $5, 8, 10, 12$ do not occur on signature $(3,1)$ & \textbf{derived} & Theorem 2 (Lemma 1 + Lemma 2). The parity lemma (\S{}4) gives only a \textbf{structural reason} --- the mandatory $\pm 1$ block; the prohibition itself is completed by the fact that a \textbf{definite rank 3} remains in the orthogonal complement \\
+the same, by an \textbf{independent route} & \textbf{measured} & enumeration of \textbf{all 24 types} of rank 4 and all reachable signatures \\
+$\Phi _{5}$, $\Phi _{10}$ do not occur on \textbf{any unimodular} lattice of rank 4 & \textbf{measured} & square class of $\det $ = 5 (\S{}4) \\
+$\Phi _{8}$ acts on $I_{2,2}$ & \textbf{measured} & explicit matrix of order 8 (\S{}4) \\
+table across ranks 2--8 & \textbf{measured} & structural count, checked against linear algebra type by type \\
+\bottomrule
+\end{longtable}
+
+\textbf{Machine check against a known answer:} enumerating integral isometries gave $\mathbb{Z}^{3}$ --- 48 elements, orders ${1,2,3,4,6}$; $A_{3}$ --- 48, the same; hexagonal --- 24, ${1,2,3,6}$. The union is ${1,2,3,4,6}$, \textbf{no order 5 at all}. This is a \textbf{check}, not a leg: the verdict is carried by the trace argument.
+
+
+\section*{4 $\cdot $ What actually filters --- and what does not}
+
+\subsection*{The mechanism --- three parts, not one}
+
+\begin{quote}\textbf{negative index 1} + \textbf{integrality} + \textbf{rank 4}\end{quote}
+
+The roles are separated:
+
+\begin{enumerate}
+\item \textbf{negative index 1} makes the negative block one-dimensional $\Longrightarrow $ a finite-order action on it is only $\pm 1$ $\Longrightarrow $ \textbf{the parity lemma}: the isotypic components of different real irreducible constituents are orthogonal for any invariant form, while on a rotation block ($\theta  \neq  0, \pi $) invariant symmetric forms correspond to \textbf{Hermitian} forms, and hence give an \textbf{even} negative index. An odd index $\Longrightarrow $ a $\pm 1$ block \textbf{must} be present;
+\item \textbf{integrality} turns this axis into an \textbf{arithmetic} one (Lemma 1) and leaves an integral lattice in the orthogonal complement;
+\item \textbf{rank 4} turns this lattice into rank 3, where the trace quantizes $2cos \theta $.
+\end{enumerate}
+
+\textbf{Signature alone filters nothing.} In the real group $O(3,1)$ an element of order 5 does exist: rotation by $2\pi /5$ in a spatial plane preserves $\operatorname{diag}(1,1,1,-1)$ and has order exactly 5. It is simply \textbf{not integral} ($cos(2\pi /5) = (\sqrt{}5-1)/4$).
+
+\textbf{"Exactly one timelike direction" is false.} There are infinitely many timelike directions ($(0,0,0,1)$, $(1,0,0,2)$, $(0,1,1,2)$ --- already three independent ones). The correct formulation is: \textbf{the maximal negative definite subspace is one-dimensional}, i.e. $negative index = 1$.
+
+\subsection*{Non-crystallographic axes: three different verdicts, not one}
+
+The tempting phrase "$\Phi _{5}$, $\Phi _{8}$, $\Phi _{12}$ can act on $I_{2,2}$, but not on $I_{3,1}$" merges \textbf{three statements of different truth-status}. One invariant distinguishes them.
+
+\textbf{Square class.} An integral invariant form on \textbf{any} $\mathbb{Z}$-lattice within the same $\mathbb{Q}$-reduction is a rational point of the same family, scaled by $\det (P)^{2}$ of the change of basis. Hence the class of $\det $ in $\mathbb{Q}*/(\mathbb{Q}*)^{2}$ \textbf{does not depend on the lattice}, and the question "does a unimodular one occur" is settled for all lattices at once --- by a single number, without enumeration:
+
+\begin{longtable}{p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth}}
+\toprule
+\textbf{type} & \textbf{$\det $ of the family of invariant forms} & \textbf{class} & \textbf{unimodular lattice} \\
+\midrule\endhead
+$\Phi _{5}$ & $5(4p_{0}^{2} + 2p_{0}p_{1} - p_{1}^{2})^{2} / 16$ & \textbf{5} & \textbf{impossible, none} \\
+$\Phi _{10}$ & $5(4p_{0}^{2} - 2p_{0}p_{1} - p_{1}^{2})^{2} / 16$ & \textbf{5} & \textbf{impossible, none} \\
+$\Phi _{3}+\Phi _{4}$, $\Phi _{4}+\Phi _{6}$ & $3p_{0}^{2}p_{1}^{2} / 4$ & \textbf{3} & \textbf{impossible, none} \\
+$\Phi _{8}$ & $(2p_{0}^{2} - p_{1}^{2})^{2}$ & 1 & \textbf{exists}, and odd at $(2,2)$ \\
+$\Phi _{12}$ & $(4p_{0}^{2} - 3p_{1}^{2})^{2} / 16$ & 1 & exists, but found to be \textbf{even} \\
+\bottomrule
+\end{longtable}
+
+Hence:
+
+\begin{itemize}
+\item \textbf{order 5} (and 10) does not act on $I_{2,2}$ --- and does not act on any unimodular lattice of rank 4;
+\item \textbf{order 8} does act, and precisely on $I_{2,2}$. To avoid relying on the classification of indefinite odd unimodular lattices, the form was diagonalized by an \textbf{explicit unimodular change of basis} to $\operatorname{diag}(1,1,-1,-1)$, and the isometry was carried into this basis:
+\end{itemize}
+
+\begin{quote}\ttfamily\small\obeylines
+   M = [ $-$3  $-$3  $-$1  $-$4 ]
+       [  3  $-$3  $-$4   1 ]      M$^{\mathsf{T}}$$\eta $M = $\eta $ for $\eta $ = diag(1,1,$-$1,$-$1),  ord(M) = 8
+       [ $-$4   1   3  $-$3 ]
+       [  1   4   3   3 ]
+\end{quote}
+
+\begin{itemize}
+\item \textbf{order 12}: a unimodular invariant form of signature $(2,2)$ exists, but the one found is \textbf{even}, i.e. it is $II_{2,2}$, not $I_{2,2}$. Whether an odd one exists is \textbf{open}: parity also depends on the lattice, so a search within a bounded box proves nothing here.
+\end{itemize}
+
+\textbf{Why this is not a bookkeeping detail.} The "safe" formulation ("they admit integral nondegenerate invariant forms of signature (2,2), but not (3,1)") is true --- and it blurs precisely this distinction, leaving the reader with the impression that all three cases are the same.
+
+\textbf{Answer to the natural question "what about quasiperiodic axes?"}: in this arithmetic there are none, and the reason is named explicitly --- not "not found", but \textbf{negative index 1 together with integrality in rank 4 leaves no room for them}.
+
+
+\section*{5 $\cdot $ Where the closure ends}
+
+Theorem 1 reduces the Lorentzian question of rank $n+1$ to the definite question of rank $n$. Measured for ranks 2--8; at rank 4 the structural count was checked against linear algebra type by type:
+
+\begin{longtable}{p{0.31\linewidth} p{0.31\linewidth} p{0.31\linewidth}}
+\toprule
+\textbf{rank} & \textbf{signature} & \textbf{orders} \\
+\midrule\endhead
+2 & $(1,1)$ & $1, 2$ \\
+3 & $(2,1)$ & $1, 2, 3, 4, 6$ \\
+\textbf{4} & \textbf{$(3,1)$} & \textbf{$1, 2, 3, 4, 6$} \\
+5 & $(4,1)$ & $1, 2, 3, 4, 5, 6, 8, 10, 12$ \\
+6 & $(5,1)$ & $1, 2, 3, 4, 5, 6, 8, 10, 12$ \\
+7 & $(6,1)$ & $1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 24, 30$ \\
+8 & $(7,1)$ & same as at rank 7 \\
+\bottomrule
+\end{longtable}
+
+\textbf{The closure breaks exactly at signature $(4,1)$}, and it breaks substantively: $\Phi _{5} \oplus  \Phi _{1}$ has degree 5 and signature $(4,0) + (0,1) = (4,1)$ --- the fivefold axis goes through as soon as the definite complement has enough rank to hold it. Next comes a \textbf{plateau} (rank 6 adds nothing), and the next break is at $(6,1)$, where order 7 appears, because $\varphi (7) = 6$.
+
+\textbf{An identity, read off from the table and verified for ranks 3--8:}
+
+\begin{quote}\ttfamily\small\obeylines
+   \{ orders on signature (n$-$1,1) \}  =  \{ orders on a definite lattice of rank n$-$1 \}
+\end{quote}
+
+This is Theorem 1 seen from the other side: \textbf{for the spectrum of finite orders}, the Lorentzian problem $(n,1)$ adds nothing beyond the definite question of rank $n$. \textbf{The formulation is deliberately narrow:} it is about the \textbf{set of orders}, not about the classification of Lorentzian lattices in general. Within these limits, "the crystallographicity of signature $(3,1)$" is not a property of Lorentzian-ness, but a property of \textbf{the number 3}: rank 3 turns out to be the \textbf{last definite rank} where the spectrum still equals the classical ${1,2,3,4,6}$.
+
+
+\section*{6 $\cdot $ Limits}
+
+\begin{itemize}
+\item \textbf{Multiplicity 1.} This statement and the three-dimensional crystallographic restriction are \textbf{not two witnesses}: Theorem 1 \textbf{reduces} the former to the latter, a common ancestor $\Longrightarrow $ multiplicity 1. The same holds for the two routes to the prohibition of order 5 --- the signature one and the trace one: both come out of \textbf{one and the same} integral arithmetic. This is \textbf{corroboration}, not independent confirmation.
+\item \textbf{Window (quasiperiodicity) is a separate input, not a consequence.} If a structure admits a window, this is a condition introduced \textbf{from outside}; what is measured here is what integral Lorentzian arithmetic allows.
+\item \textbf{No physical reading whatsoever.} The term "timelike" is used \textbf{only} in the sense of the sign of the quadratic form; no interpretation of a time coordinate is introduced.
+\item \textbf{Open:} whether order 12 acts on $I_{2,2}$ (\S{}4). A general description of the square class of $\det $ for an arbitrary cyclotomic type was not sought here.
+\item \textbf{Zero imports in the chain.} What is telling is \textbf{how} the last debt was closed: the first attribution attached to the step of Lemma 2 ("Hermann--Mauguin") turned out to be \textbf{the name of a notation mistaken for a theorem}, and was removed; instead of looking for a replacement, the step was derived. It proved cheaper to \textbf{prove} than to cite correctly. The same thing happened a second time in \S{}4: the classification of unimodular lattices was replaced by explicit diagonalization.
+\end{itemize}
+
+
+\section*{7 $\cdot $ Relation to preprint-7}
+
+\begin{longtable}{p{0.47\linewidth} p{0.47\linewidth}}
+\toprule
+\textbf{what} & \textbf{where} \\
+\midrule\endhead
+full statement, proof, scope & \textbf{here} \\
+a line about the scope, \textbf{without a reference here} & P7 \S{}11(d) \\
+a reference \textbf{from here to P7} --- legitimate & P7 is published, concept DOI $10.5281/zenodo.22125370$ \\
+a reference \textbf{from P7 to here} --- not yet & waits for this work's address \\
+\bottomrule
+\end{longtable}
+
+\textbf{A forward-reference is not placed:} a reference to a nonexistent artifact is broken from day one and is fixed only by a new version. The asymmetry is deliberate and temporary: when this work receives an address, the line at P7 \S{}11(d) will receive a reference \textbf{via a new version of P7}, not by editing what is published.
+
+\textbf{Preprint-7:} \emph{Section Criteria for Integral Lorentzian Lattices and the Cost of Realization}, Zenodo [10.5281/zenodo.22125370](https://doi.org/10.5281/zenodo.22125370).
+
+
+\section*{Acknowledgement}
+
+This text went through \textbf{two rounds of external review}. The first pointed to a gap in the proof of the rationality of the axis, to an incomplete measurement for order 12, and to an overstated formulation about $I_{2,2}$; the second --- to the fact that Theorem 1 claimed equality of sets while only one inclusion was proved, and to two overstated formulations in \S{}3 and \S{}5. All remarks were accepted: the proof route was rebuilt, \S{}4 was rewritten, the inclusion $\subseteq $ was added. The errors that remain are the author's.
+
+\end{document}

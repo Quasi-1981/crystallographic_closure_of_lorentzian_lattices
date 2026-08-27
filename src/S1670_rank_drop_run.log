@@ -1,0 +1,22 @@
+==========================================================================
+S1670 — rank(Lambda cap t^perp) = 4 - r  (irrational observer has no 3D crystal)
+==========================================================================
+
+   t                                r(hand) rank(4-r) rank(meas) match
+   (1,1,1,2)      rational          1      3        3        OK
+   (1,sqrt2,0,0)  r=2               2      2        2        OK
+   (1,sqrt2,sqrt3,sqrt6)  r=4       4      0        0        OK
+   (2,3,-1,5)     rational (extra)  1      3        3        OK
+   (1,sqrt2,1,0)  r=2 (extra)       2      2        2        OK
+
+-- VERDICT --
+   [OK] rank(Lambda cap t^perp) = 4 - r on all controls
+   [OK] 3D crystal (rank 3) <=> r=1 <=> t rational (up to scalar)
+   [note] KILL-A (rank != 4-r): not fired
+   VERDICT: OK -> irrational t (r>=2) has NO 3D crystal; needs a window
+
+   => crystallography's NATIVE FLOOR is 0 (rational/field level): a rank-3 crystal section
+      exists iff the timelike direction t is RATIONAL (r=1).  Irrational (algebraic) t gives
+      rank 4-r < 3 => no 3D lattice; a quasicrystal needs an external WINDOW (cut-and-project).
+
+[dump] child-3.1/src\S1670_rank_drop_dump.jsonl

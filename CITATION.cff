@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Crystallographic Closure of Integral Lorentzian Lattices and the Rank at Which It Ends (Geometry of the vacuum, floor 0)"
+version: "1.0.0"
+type: software
+authors:
+  - family-names: "Sobol"
+    given-names: "Vladimir"
+license: CC-BY-4.0
+date-released: "2026-08-27"
+keywords:
+  - "integral lattice"
+  - "Lorentzian lattice"
+  - "signature (3,1)"
+  - "finite-order isometry"
+  - "crystallographic restriction"
+  - "orbit averaging"
+  - "positive definite lattice"
+  - "unimodular lattice"
+  - "cyclotomic polynomial"
+  - "square class"
+  - "invariant quadratic form"
+abstract: >-
+  For an integral lattice of signature (n,1), every finite-order isometry is shown
+  to fix an INTEGRAL timelike vector up to sign, by averaging one integral timelike
+  vector over the finite orbit of the isometry after the sign that preserves a cone
+  component has been factored out. The orthogonal complement of that vector is then
+  a positive definite integral lattice of rank n, invariant under the isometry, and
+  the set of finite orders realisable on signature (n,1) is proved EQUAL -- both
+  inclusions -- to the set realisable on positive definite lattices of rank n. For
+  n = 3 the trace argument on the definite complement gives orders {1,2,3,4,6} for
+  every integral lattice of signature (3,1), unimodularity playing no role in the
+  bound; for the specific lattice I_(3,1) all five orders are exhibited by explicit
+  integral matrices, so the set is sharp. The mechanism is separated into its three
+  independent ingredients -- negative index one, integrality, and rank four -- and
+  each is shown to be load-bearing: signature alone does not forbid order five,
+  since a real rotation by 2*pi/5 preserves the form and fails only to be integral.
+  A parity lemma, derived from the structure of invariant forms on isotypic
+  components, states that a rotation component always contributes an even negative
+  index, so an odd negative index forces a plus-or-minus one eigenvector. The
+  question of which non-crystallographic orders act on a UNIMODULAR lattice of rank
+  four is settled for every lattice at once by the square class of the determinant
+  of the family of invariant forms, an invariant independent of the choice of
+  lattice inside a fixed rational representation: orders five and ten are excluded
+  from every unimodular lattice, order eight acts on I_(2,2) with an explicit
+  order-eight matrix given, and order twelve admits an even unimodular form of
+  signature (2,2) while the odd case is left open. Finally the orders realisable on
+  signature (n-1,1) are tabulated for ranks two to eight, showing that the
+  crystallographic set survives up to signature (3,1) and breaks at (4,1), where
+  orders 5, 8, 10 and 12 enter, with the next break at (6,1). No physical reading of
+  any object is made anywhere in the work.

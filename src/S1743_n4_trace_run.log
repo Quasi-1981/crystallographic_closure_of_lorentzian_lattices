@@ -1,0 +1,33 @@
+==============================================================================
+S1743 — N.4 crystallographic restriction (trace argument) machine corroboration (naryad #45 takt-A)
+==============================================================================
+
+-- Z^3 (cubic) : |O(G,Z)| = 48 --
+   orders present: [1, 2, 3, 4, 6]
+   traces present: [-3, -1, 0, 1, 3] (each tr = +-1 + 2cos, integer)
+
+-- A3 (fcc, det 4) : |O(G,Z)| = 48 --
+   orders present: [1, 2, 3, 4, 6]
+   traces present: [-3, -1, 0, 1, 3] (each tr = +-1 + 2cos, integer)
+
+-- hexagonal (A2(+)<1>) : |O(G,Z)| = 24 --
+   orders present: [1, 2, 3, 6]
+   traces present: [-3, -2, -1, 0, 1, 2, 3] (each tr = +-1 + 2cos, integer)
+
+-- trace argument (per-order): 2cos = tr -/+ 1 in {-2,-1,0,1,2} <=> order in {1,2,3,4,6} --
+   order 1 : rotation trace-part 2cos = +2 (cos=+1.00) -- allowed (2cos integer)
+   order 2 : rotation trace-part 2cos = -2 (cos=-1.00) -- allowed (2cos integer)
+   order 3 : rotation trace-part 2cos = -1 (cos=-0.50) -- allowed (2cos integer)
+   order 4 : rotation trace-part 2cos = +0 (cos=+0.00) -- allowed (2cos integer)
+   order 6 : rotation trace-part 2cos = +1 (cos=+0.50) -- allowed (2cos integer)
+   order 5 : 2cos(72deg) = 0.6180 -- NOT an integer => FORBIDDEN (tr would be non-integer)
+
+-- VERDICT --
+   [OK] union of orders over all definite rank-3 Grams = [1, 2, 3, 4, 6] subset {1,2,3,4,6}
+   [OK] order 5 ABSENT (N-16 control -- matches signature measurement C-43): True
+   [note] integer traces observed: [-3, -2, -1, 0, 1, 2, 3] (all = +-1+2cos with 2cos integer)
+   ★N.4 NATIVIZED: crystallographic restriction {1,2,3,4,6} follows from tr(g)=+-1+2cos in Z
+     (integer isometry) -- NO import.  Machine corroboration confirms (no order 5).  📖 -> derived.
+   [scope] definite rank-3, integer isometries |coord|<=2; 0 handles.
+
+[dump] child-3.1/src\S1743_n4_trace_dump.jsonl
