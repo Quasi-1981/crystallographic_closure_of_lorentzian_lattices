@@ -64,6 +64,8 @@ MATH = {
     "ȳ": r"\bar{y}", "̄": "",
     "ℓ": r"\ell ", "₅": r"_{5}", "✓": r"\checkmark ",
     "δ": r"\delta ", "₆": r"_{6}",
+    "ζ": r"\zeta ", "τ": r"\tau ", "⁺": r"^{+}", "ₙ": r"_{n}",
+    "⅓": r"\tfrac{1}{3}", "↔": r"\leftrightarrow ", "⊊": r"\subsetneq ",
     "📖": r"\mbox{\bookmark{}}",
     "—": r"\mbox{---}",
 }
