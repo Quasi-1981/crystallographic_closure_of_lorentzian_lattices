@@ -14,10 +14,14 @@ version: "1.0.0"
 date_released: "2026-08-27"
 
 # ★DOI-ПРАВИЛО: concept-DOI через інтеграцію GitHub→Zenodo; версійний DOI видається
-# Zenodo В МОМЕНТ тегу релізу. Тут порожньо, доки Zenodo не видав адресу —
-# зовнішній DOI у .zenodo.json ламає ланцюг версій, тому туди він не пишеться НІКОЛИ.
-doi: ""
-concept_doi: ""
+# Zenodo В МОМЕНТ тегу релізу. doi тут = CONCEPT-DOI (у CITATION.cff, «cite all
+# versions», завжди-остання). ★Зовнішній DOI у .zenodo.json НЕ пишеться НІКОЛИ —
+# він ламає ланцюг версій; генератор його туди й не кладе.
+# Per-version DOI релізу 1.0.0 = 10.5281/zenodo.22126884.
+# Обидва зчитані з Zenodo REST API (/api/records/22126884: conceptdoi, doi),
+# не виведені «на одиницю менше».
+doi: "10.5281/zenodo.22126883"
+concept_doi: "10.5281/zenodo.22126883"
 
 creators:
   - name: "Sobol, Vladimir"

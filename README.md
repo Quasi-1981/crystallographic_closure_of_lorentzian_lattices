@@ -103,6 +103,17 @@ acknowledgement.
 
 ## Citing
 
-The DOI is assigned on deposit and will be recorded here and in `CITATION.cff` at that point.
+Cite all versions by the **concept DOI**
+[10.5281/zenodo.22126883](https://doi.org/10.5281/zenodo.22126883) — it always resolves to the
+latest version. The first release, v1.0.0, has the version DOI
+[10.5281/zenodo.22126884](https://doi.org/10.5281/zenodo.22126884); cite that one when you need
+to point at exactly the text you read.
+
+```
+Sobol, V. (2026). Crystallographic Closure of Integral Lorentzian Lattices and the Rank
+at Which It Ends (Geometry of the vacuum, floor 0) (v1.0.0). Zenodo.
+https://doi.org/10.5281/zenodo.22126884
+```
+
 Companion papers of the series: Zenodo [10.5281/zenodo.22125370](https://doi.org/10.5281/zenodo.22125370)
 and [10.5281/zenodo.22068307](https://doi.org/10.5281/zenodo.22068307).
